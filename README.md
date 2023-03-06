@@ -1,27 +1,42 @@
 # ToDoList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+This is a baasic Angular Todo List WebApp.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies
 
-## Code scaffolding
+- Framework Angular
+- HTML5
+- CSS3
+- TypeScript
+- BootStrap
+- IndexedDB (to store all data in a local database)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Function
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Create Todo List with:
+  - name
+  - description
+- Create Todo element whith
+- Delete and update your List and element
+- Badge with counter of:
+  - all element in list
+  - done element in list
+  - undone element in list
+- Check done element
 
-## Running unit tests
+## Validation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- The list name is unique, you can't create a duplicated list
+- When a list is deleted, all related element are automatically deleted
 
-## Running end-to-end tests
+<p align="center">
+  <img width="30%" src="https://user-images.githubusercontent.com/119518435/223160506-fb12c843-01da-4f22-a491-2b0d72a5be12.png">
+  
+<img width="30%" src="https://user-images.githubusercontent.com/119518435/223160575-877f6784-53f2-4808-8ba3-3c7e1beaecce.png">
+  
+  <img width="30%" src="https://user-images.githubusercontent.com/119518435/223160617-24f323a0-24cc-4e46-8d1a-5e19c7984841.png">
+</p>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<img width="100%" src="https://user-images.githubusercontent.com/119518435/223160653-7ce03ff3-a813-46da-9535-43dbd4519d77.png">
