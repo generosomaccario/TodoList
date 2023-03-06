@@ -1,0 +1,30 @@
+<div class="modal fade show" tabindex="-1" role="dialog" [ngStyle]="style">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modifica lista ToDo</h5>
+                <button type="button" class="close" (click)="hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Nome lista:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="listName"
+                            [(ngModel)]="listName">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Descrizione lista:</label>
+                        <textarea class="form-control" id="message-text" [(ngModel)]="listDescription"
+                            name="listDescription"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="hide()">Annulla</button>
+                <button type="button" class="btn btn-primary" (click)="edit()">Salva</button>
+            </div>
+        </div>
+    </div>
+</div>

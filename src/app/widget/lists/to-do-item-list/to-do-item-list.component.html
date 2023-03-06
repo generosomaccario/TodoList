@@ -1,0 +1,14 @@
+<h3>{{ todoList?.title }}</h3>
+<p>{{ todoList?.description }}</p>
+
+<app-new-to-do-item-form [ToDoListId]="ReceivedListId" (onItemAdd)="onItemAdd()"></app-new-to-do-item-form>
+<br>
+<li *ngFor="let item of todoItems" class="list-group-item d-flex justify-content-between align-items-start">
+    <div>
+        <input class="form-check-input me-1" type="checkbox" [(ngModel)]="item.done" (click)="changeValue(item.id)"
+            id="checkbox_{{ item.id }}">
+        <label class="form-check-label" for="checkbox_{{ item.id }}" [ngClass]="{'done': item.done}">{{ item.title
+            }}</label>
+    </div>
+    <i class="fa-solid fa-trash" (click)="removeItem(item.id)"></i>
+</li>

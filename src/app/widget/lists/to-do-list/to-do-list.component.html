@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-4">
+
+        <div class="list-group" id="list-tab" role="tablist" *ngFor="let list of todoLists">
+            <div class="row">
+                <div class="col-md-auto d-flex flex-column justify-content-center align-items-center">
+                    <div class="row mb-1">
+                        <i class="fa-solid fa-trash" (click)="removeList(list.id)"></i>
+                    </div>
+                    <div class="row mb-1">
+                        <i class="fa-solid fa-pencil" (click)="showDialog(list.id)"></i>
+                        <app-edit-list-modal #appDialog></app-edit-list-modal>
+
+                    </div>
+                </div>
+                <li class="list-group-item col" (click)="selectList(list.id)"
+                    [ngClass]="{ 'active': selectedListId === list.id }">
+                    {{ list.title }}
+                    <app-badge [list]="list"></app-badge>
+                </li>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+            <div *ngIf="listId" class="tab-pane fade show active list-group" role="tabpanel"
+                aria-labelledby="list-home-list">
+                <app-to-do-item-list [ReceivedListId]="listId" *ngIf="showItemList"></app-to-do-item-list>
+            </div>
+        </div>
+    </div>
+</div>
